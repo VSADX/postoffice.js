@@ -13,7 +13,7 @@ export function postoffice(func, declared_count = 0) {
 
     return function count_params(...args) {
         const params = base_params.slice()
-        merge(params, args)
+        mailmerge(params, args)
 
         return (params.some(param => param === N)) ?
             (...args) => count_params(...mailmerge(params.slice(), args)) :
