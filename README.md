@@ -19,7 +19,7 @@ import { postoffice, N } from "postoffice.js"
 const subtract = postoffice((first, second) => first - second)
 
 // `subtract` takes two parameters, but we only fill in the `first`
-const take_from_100 = subract(100)
+const take_from_100 = subtract(100)
 
 console.log(take_from_100(70)) // 30
 
@@ -33,7 +33,7 @@ const subtract = postoffice((first, second) => first - second)
 
 // `subtract` takes two parameters, but we only supply the `second`
 // the const `N` tells our function that we don't want to place a value in it yet
-const take_away_20 = subract(N, 20)
+const take_away_20 = subtract(N, 20)
 
 console.log(take_away_20(80)) // 60
 
