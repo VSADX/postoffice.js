@@ -4,7 +4,7 @@ PostOffice helps you create *more* reusable functions.
   
 + **Powerful**: PostOffice lets you create simple functions, then bind any of the parameters you choose. 
 Like `.bind` in JavaScript, binding a parameter creates a copy of your function. This way, you can bind 
-parameters to the same function many times creating new functions (like Dependency Injection or Patial 
+parameters to the same function many times creating new functions (like Dependency Injection or Partial 
 Application).
 + **Simple**: You don't need to write in a particular style! PostOffice exports just one function. If you 
 pass in a function to `postoffice()`, you get a new function that support arbitrary parameter binding.
@@ -18,6 +18,7 @@ import { postoffice, N } from "postoffice.js"
 
 const subtract = postoffice((first, second) => first - second)
 
+// `subtract` takes two parameters, but we only fill in the `first`
 const take_from_100 = subract(100)
 
 console.log(take_from_100(70)) // 30
@@ -30,6 +31,8 @@ console.log(take_from_100(127)) // -27
 ```js
 const subtract = postoffice((first, second) => first - second)
 
+// `subtract` takes two parameters, but we only supply the `second`
+// the const `N` tells our function that we don't want to place a value in it yet
 const take_away_20 = subract(N, 20)
 
 console.log(take_away_20(80)) // 60
