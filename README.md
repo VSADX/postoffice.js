@@ -75,6 +75,9 @@ sell_drink("Sprite") // "Sprite: $1.20"
 sell_drink("Pepsi") // "Pepsi: $1.20"
 ```
   
+<br>  
+  
+**FizzBuzz example**  
 ```js
 const multiple_of = postoffice((num, multiple, message) => 
               num % multiple === 0 ? message : false)
