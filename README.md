@@ -1,6 +1,16 @@
-# postoffice.js
+# PostOffice
   
-
+PostOffice helps you create *more* reusable functions.  
+  
++ **Powerful**: PostOffice lets you create simple functions, then bind any of the parameters you choose. 
+Like `.bind` in JavaScript, binding a parameter creates a copy of your function. This way, you can bind 
+parameters to the same function many times creating new functions (like Dependency Injection or Patial 
+Application).
++ **Simple**: You don't need to write in a particular style! PostOffice exports just one function. If you 
+pass in a function to `postoffice()`, you get a new function that support arbitrary parameter binding.
++ **Tiny**: The principles behind this library are so simple, you could do it yourself. However, `postoffice.js` 
+is only 22 lines of code, so feel free to check out how it works.
+  
 ```js
 import { postoffice, N } from "postoffice.js"
 
