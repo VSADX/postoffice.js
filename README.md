@@ -86,8 +86,13 @@ const by3 = multiple_of(N, 3, "Fizz")
 const by5 = multiple_of(N, 5, "Buzz")
 const by3x5 = multiple_of(N, 3 * 5, "Fizz Buzz")
 
-for(let i = 1; i < 20; i++) 
-    console.log([by3x5, by5, by3].map(f => f(i)).find(x => x) || i)
+const all_funcs = [by3x5, by5, by3]
+
+for(let i = 1; i < 20; i++) {
+    console.log(
+        all_funcs.map(func => func(i)).find(x => x !== false) || i
+    )
+}   
    
 ```  
   
