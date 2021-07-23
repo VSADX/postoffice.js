@@ -9,6 +9,8 @@ const subtract = postoffice((first, second) => first - second)
 const take_from_100 = subract(100)
 
 console.log(take_from_100(70)) // 30
+
+console.log(take_from_100(127)) // -27
 ```
   
 <br>  
@@ -19,6 +21,8 @@ const subtract = postoffice((first, second) => first - second)
 const take_away_20 = subract(N, 20)
 
 console.log(take_away_20(80)) // 60
+
+console.log(take_away_20(13)) // -7
 ```
     
 <br>  
