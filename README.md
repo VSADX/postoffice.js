@@ -75,6 +75,19 @@ sell_drink("Sprite") // "Sprite: $1.20"
 sell_drink("Pepsi") // "Pepsi: $1.20"
 ```
   
+```js
+const multiple_of = postoffice((num, multiple, message) => 
+              num % multiple === 0 ? message : false)
+
+const by3 = multiple_of(N, 3, "Fizz")
+const by5 = multiple_of(N, 5, "Buzz")
+const by3x5 = multiple_of(N, 3 * 5, "Fizz Buzz")
+
+for(let i = 1; i < 20; i++) 
+    console.log([by3x5, by5, by3].map(f => f(i)).find(x => x) || i)
+   
+```  
+  
 References  
 XMoñOcci, XBind, Ocxi.js  
   
